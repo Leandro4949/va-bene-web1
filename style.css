@@ -397,9 +397,6 @@ h1, h2, h3 {
 
 
 
-/* ============================================
-   RESERVATIONS
-============================================ */
 
 .reservation .lead {
   max-width: 520px;
@@ -913,21 +910,19 @@ textarea {
 .about::before {
   content: none !important;
 }
+@media (max-width: 768px) {
+  body {
+    background-image: url("menu-hero.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: scroll !important;
+  }
 
-.hero,
-.hero::before,
-.hero-bg {
-  background: transparent !important;
-  content: none !important;
-  display: none !important; /* скрива малката снимка */
-}
+  .hero {
+    background: transparent !important;
+  }
 
-/* На меню страницата също спираме фоновете, за да се вижда само глобалната */
-.menu-hero {
-  background: transparent !important;
-}
-
-.menu-hero-bg,
-.menu-hero-overlay {
-  display: none !important;
+  .hero-bg {
+    display: none !important;
+  }
 }
