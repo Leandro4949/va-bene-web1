@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VA BENE • Wine & Dine — Италиански ресторант в Плевен</title>
+  <meta name="description" content="VA BENE — италиански ресторант в Плевен. Меню, резервации, контакти. Адрес: ул. Асен Златаров 4. Работно време: всеки ден 08:00–23:00.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+  <a class="brand" href="index.html">
+    <img src="assets/logo/logo.png" class="brand-logo" alt="VA BENE">
+
+    <div class="brand-meta">
+      <span class="brand-name">VA BENE</span>
+      <span class="brand-sub">WINE & DINE</span>
+    </div>
+
+  </a>
+
+  <nav class="main-nav">
+    <a href="index.html" class="active">НАЧАЛО</a>
+    <a href="menu.html">МЕНЮ</a>
+    <a href="#reservation">РЕЗЕРВАЦИИ</a>
+    <a href="#contact">КОНТАКТИ</a>
+  </nav>
+
+  <button class="burger" id="burger"><span></span><span></span><span></span></button>
+</header>
+
+
+  <!-- Fullscreen mobile menu -->
+  <nav class="overlay" id="mobileMenu" aria-hidden="true">
+    <button class="overlay-close" id="closeMenu" aria-label="Затвори меню">×</button>
+    <ul class="overlay-nav">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="menu.html">Меню</a></li>
+      <li><a href="#reservation">Резервации</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO (Италия – без звук) -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content reveal">
+    <img src="assets/logo/logo.png" class="hero-logo" alt="VA BENE">
+
+   <div class="hero-glass">
+  <h1 class="hero-title">VA BENE</h1>
+</div>
+
+    <p>Ristorante • Terrazza • Wine &amp; Dine</p>
+
+    <div class="hero-actions">
+      <a class="btn ghost" href="menu.html">Меню</a>
+      <a class="btn primary" href="#reservation">Резервирай маса</a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <h2>Италиански дух в сърцето на Плевен</h2>
+          <p>В <strong>VA BENE</strong> съчетаваме автентични рецепти, пресни продукти и селекция от италиански вина. От домашна паста и ароматно ризото до морски специалитети — всичко е поднесено с внимание и стил.</p>
+          <ul class="ticks">
+            <li>Пресни сезонни продукти</li>
+            <li>Вина от Тоскана, Пиемонт и Сицилия</li>
+            <li>Атмосфера като на италианска тераса</li>
+          </ul>
+        </div>
+
+        <div class="about-card reveal delay-1">
+          <div class="about-card__row">
+            <div>
+              <h3>Работно време</h3>
+              <p>Всеки ден <strong>08:00 – 23:00</strong></p>
+            </div>
+            <div>
+              <h3>Телефон</h3>
+              <p><a href="tel:+359878448688">0878 448 688</a></p>
+            </div>
+          </div>
+          <div class="about-card__cta">
+            <a href="menu.html" class="btn ghost wide">Разгледай меню</a>
+            <a href="#reservation" class="btn primary wide">Резервирай</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation -->
+  <section class="section reservation" id="reservation">
+    <div class="container">
+      <h2 class="reveal">Резервации</h2>
+      <p class="lead reveal delay-1">Изпратете заявка – ще потвърдим по телефон или имейл.</p>
+
+      <form id="reserveForm" class="reserve-form reveal delay-2" method="post" action="send.php" novalidate>
+        <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off">
+
+        <div class="grid">
+          <label>Име
+            <input type="text" name="name" required>
+          </label>
+          <label>Телефон
+            <input type="tel" name="phone" required>
+          </label>
+        </div>
+
+        <div class="grid">
+          <label>E-mail
+            <input type="email" name="email" required>
+          </label>
+          <label>Брой гости
+            <input type="number" name="guests" min="1" max="20" value="2" required>
+          </label>
+        </div>
+
+        <div class="grid">
+          <label>Дата
+            <input type="date" name="date" required>
+          </label>
+          <label>Час
+            <input type="time" name="time" required>
+          </label>
+        </div>
+
+        <label>Бележка
+          <textarea name="note" rows="3" placeholder="Предпочитана зона, повод..."></textarea>
+        </label>
+
+        <button type="submit" class="btn primary wide">Изпрати заявка</button>
+        <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="reveal">Контакти</h2>
+      <div class="contact-grid reveal delay-1">
+        <div class="contact-card">
+          <h3>VA BENE — Wine &amp; Dine</h3>
+          <p>ул. Асен Златаров 4, Плевен</p>
+          <p>Телефон: <a href="tel:+359878448688">0878 448 688</a></p>
+          <p>Работно време: Всеки ден <strong>08:00 – 23:00</strong></p>
+          <a class="btn ghost" href="#reservation">Резервирай</a>
+        </div>
+        <iframe class="map" title="Карта — VA BENE" loading="lazy"
+          src="https://www.google.com/maps?q=ул.%20Асен%20Златаров%204,%20Плевен&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <div class="f-brand">
+        <img src="assets/logo.png" alt="VA BENE" class="brand-logo small">
+        <div>
+          <div class="brand-name">VA BENE</div>
+          <div class="brand-sub">Wine &amp; Dine</div>
+        </div>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#about">За нас</a></li>
+        <li><a href="menu.html">Меню</a></li>
+        <li><a href="#reservation">Резервации</a></li>
+        <li><a href="#contact">Контакти</a></li>
+      </ul>
+      <div class="footer-copy">© <span id="year"></span> VA BENE. Всички права запазени.</div>
+    </div>
+    <a href="#top" class="to-top" aria-label="Към началото">↑</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+

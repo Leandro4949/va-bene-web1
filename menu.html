@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Меню • VA BENE</title>
+
+  <!-- шрифтове + твоя стил -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER (същият като в index.html) -->
+<header class="site-header" id="top">
+  <a class="brand" href="index.html">
+    <img src="assets/logo/logo.png" class="brand-logo" alt="VA BENE">
+    <div class="brand-meta">
+      <span class="brand-name">VA BENE</span>
+      <span class="brand-sub">WINE & DINE</span>
+    </div>
+  </a>
+
+  <nav class="main-nav">
+    <a href="index.html">Начало</a>
+    <a href="menu.html" class="active">Меню</a>
+    <a href="index.html#reservation">Резервации</a>
+    <a href="index.html#contact">Контакти</a>
+  </nav>
+
+  <button class="burger" id="burger"><span></span><span></span><span></span></button>
+</header>
+
+<nav class="overlay" id="mobileMenu">
+  <button class="overlay-close" id="closeMenu">×</button>
+  <ul class="overlay-nav">
+    <li><a href="index.html">Начало</a></li>
+    <li><a href="menu.html">Меню</a></li>
+    <li><a href="index.html#reservation">Резервации</a></li>
+    <li><a href="index.html#contact">Контакти</a></li>
+  </ul>
+</nav>
+
+<!-- HERO НА МЕНЮТО -->
+<section class="menu-hero">
+  <div class="menu-hero-content reveal">
+    <img src="assets/logo/logo.png" class="menu-hero-logo" alt="VA BENE">
+    <h1>Меню</h1>
+    <p class="lead">Подбрани специалитети от автентичната италианска кухня</p>
+    <div class="menu-divider"></div>
+  </div>
+</section>
+
+
+
+<!-- ЦЯЛОТО МЕНЮ -->
+<main class="menu-page">
+  <div class="container">
+
+    <!-- 🥗 САЛАТИ -->
+    <section class="menu-section reveal">
+      <h2>Салати</h2>
+      <div class="menu-group">
+        <div class="menu-item"><div><div class="menu-item-title">Ди Каприно</div><div class="menu-item-desc">Микс зелени салати, плодове и козе сирене – 300гр</div></div><div class="menu-item-price">17.20 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Венеция</div><div class="menu-item-desc">Микс свежи салати, чери домати и сирена – 300гр</div></div><div class="menu-item-price">17.80 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Бурата</div><div class="menu-item-desc">Домат, рукола, бурата и прошуто – 400гр</div></div><div class="menu-item-price">18.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Панцанела</div><div class="menu-item-desc">Домати, краставица, маслини Таджаска, козе сирене, крутони – 350гр</div></div><div class="menu-item-price">17.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Снежанка с кашу</div><div class="menu-item-desc">Кисела краставичка, кашу, гръцки йогурт, копър и чесън – 250гр</div></div><div class="menu-item-price">12.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Цезар с пиле и хрупкав бекон</div><div class="menu-item-desc">Айсберг, зелена салата, бекон, пилешко филе, пармезан, чери домати, крутони и аншоа – 350гр</div></div><div class="menu-item-price">19.50 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Капрезе</div><div class="menu-item-desc">Розов домат, моцарела, рукола, прошуто и пармезан – 350гр</div></div><div class="menu-item-price">18.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Ва Бене</div><div class="menu-item-desc">Чери домати, крутони, прошуто, пармезан, зелена салата и авокадо – 350гр</div></div><div class="menu-item-price">18.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Нисуаз</div><div class="menu-item-desc">Зелен боб, сьомга, зелена салата, яйце, маслини и чери домати – 400гр</div></div><div class="menu-item-price">22.90 лв</div></div>
+      </div>
+    </section>
+
+    <!-- 🧊 СТУДЕНИ ПРЕДЯСТИЯ -->
+    <section class="menu-section reveal">
+      <h2>Студени предястия</h2>
+      <div class="menu-group">
+        <div class="menu-item"><div><div class="menu-item-title">Микс разядки</div><div class="menu-item-desc">Тарама, айвар с крема сирене, патладжан с майонеза, хумус – 300гр</div></div><div class="menu-item-price">18.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Плато италиански сирена</div><div class="menu-item-desc">Проволоне, качота, горгонзола, скаморца – 200гр</div></div><div class="menu-item-price">24.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Плато италиански колбаси</div><div class="menu-item-desc">Прошуто крудо, прошуто кото, мортадела, ветчина – 200гр</div></div><div class="menu-item-price">24.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Брускети с прошуто</div><div class="menu-item-desc">Крема сирене, сушен домат, прошуто крудо – 200гр</div></div><div class="menu-item-price">14.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Брускети с пушена сьомга</div><div class="menu-item-desc">Крема сирене, черен хайвер, каперси, пушена сьомга – 200гр</div></div><div class="menu-item-price">16.90 лв</div></div>
+      </div>
+    </section>
+
+    <!-- 🔥 ТОПЛИ ПРЕДЯСТИЯ -->
+    <section class="menu-section reveal">
+      <h2>Топли предястия</h2>
+      <div class="menu-group">
+        <div class="menu-item"><div><div class="menu-item-title">Аранчини</div><div class="menu-item-desc">Ориз арборио, грах, моцарела, прошуто – 250гр</div></div><div class="menu-item-price">15.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Панцароти</div><div class="menu-item-desc">Картофи, моцарела, пармезан – 250гр</div></div><div class="menu-item-price">15.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Хрупкави калмари</div><div class="menu-item-desc">Калмари, билки, лимон – 200гр</div></div><div class="menu-item-price">19.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Октопод по сицилиански</div><div class="menu-item-desc">Октопод, сушен домат, маслини, каперси – 250гр</div></div><div class="menu-item-price">36.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Скариди с магданоз, чесън и вино</div><div class="menu-item-desc">Скариди соте – 200гр</div></div><div class="menu-item-price">26.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Запечено козе сирене</div><div class="menu-item-desc">Зелени смокини, шам фъстък – 150гр</div></div><div class="menu-item-price">16.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Пилешки пръчици с медено-горчичен сос</div><div class="menu-item-desc">Хрупкаво пиле + дип – 250гр</div></div><div class="menu-item-price">18.00 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Трилогия картофки с три вида сос</div><div class="menu-item-desc">Три вида картофи + сосове – 350гр</div></div><div class="menu-item-price">13.90 лв</div></div>
+        <div class="menu-item"><div><div class="menu-item-title">Sapori di Mare за двама</div><div class="menu-item-desc">Скариди, калмари, лаврак, миди Вонголи, рачешки опашки, шафранов ориз, картофки – 800гр</div></div><div class="menu-item-price">69.00 лв</div></div>
+      </div>
+    </section>
+
+    <!-- 🍚 РИЗОТО -->
+    <section class="menu-section reveal">
+      <h2>Ризото</h2>
+      <div class="menu-group">
+        <div class="menu-item"><div class="menu-item-title">Ризото с пиле и манатарки</div><div class="menu-item-price">16.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Ризото Ди Маре</div><div class="menu-item-price">23.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Ризото със сьомга и шафран</div><div class="menu-item-price">23.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Ризото с гъби</div><div class="menu-item-price">15.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Ризото с панчета</div><div class="menu-item-price">19.90 лв</div></div>
+      </div>
+    </section>
+
+    <!-- 🍝 ПАСТА -->
+    <section class="menu-section reveal">
+      <h2>Паста</h2>
+      <div class="menu-group">
+        <div class="menu-item"><div class="menu-item-title">Карбонара</div><div class="menu-item-price">18.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Болонезе</div><div class="menu-item-price">17.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Салмоне</div><div class="menu-item-price">23.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Качо е Пепе</div><div class="menu-item-price">16.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Скариди с тиквичка и пармезан</div><div class="menu-item-price">23.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Ала Италия</div><div class="menu-item-price">24.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Алфредо с пиле</div><div class="menu-item-price">18.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Вонголи</div><div class="menu-item-price">17.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Паста Помодоро</div><div class="menu-item-price">15.90 лв</div></div>
+      </div>
+    </section>
+
+    <!-- 🥩 ОСНОВНИ -->
+    <section class="menu-section reveal">
+      <h2>Основни</h2>
+      <div class="menu-group">
+        <div class="menu-item"><div class="menu-item-title">Пиле Ал Лимоне</div><div class="menu-item-price">22.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Пилешки бонфиленца с терияки и черен ориз</div><div class="menu-item-price">22.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Пиле с къри, чедър и сладки картофи</div><div class="menu-item-price">24.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Гарибалди</div><div class="menu-item-price">24.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Свинско бонфиле с нахут</div><div class="menu-item-price">24.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Ти-бон стек</div><div class="menu-item-price">25.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Кралски котлет</div><div class="menu-item-price">25.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Свински ребра с BBQ сос</div><div class="menu-item-price">27.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Телешки медальони</div><div class="menu-item-price">32.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Телешки стек с грейви сос</div><div class="menu-item-price">32.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Рибай стек</div><div class="menu-item-price">49.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Сьомга филе с гарнитура</div><div class="menu-item-price">32.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Филе от лаврак</div><div class="menu-item-price">32.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Патешко магре</div><div class="menu-item-price">37.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Стек от карфиол</div><div class="menu-item-price">16.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Телешко особуко с шафраново ризото</div><div class="menu-item-price">35.90 лв</div></div>
+      </div>
+    </section>
+
+    <!-- 🍔 БУРГЕРИ -->
+    <section class="menu-section reveal">
+      <h2>Бургери</h2>
+      <div class="menu-group">
+        <div class="menu-item"><div class="menu-item-title">Телешки бургер</div><div class="menu-item-price">22.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Бургер с хрупкаво пилешко</div><div class="menu-item-price">19.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Спиедини ди Майале</div><div class="menu-item-price">21.90 лв</div></div>
+      </div>
+    </section>
+
+    <!-- 🍰 ДЕСЕРТИ -->
+    <section class="menu-section reveal">
+      <h2>Десерти</h2>
+      <div class="menu-group">
+        <div class="menu-item"><div class="menu-item-title">Палачинка Ва Бене</div><div class="menu-item-price">8.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Тирамису</div><div class="menu-item-price">8.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Чийзкейк Сан Себастиан</div><div class="menu-item-price">8.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Сладоледена нуга</div><div class="menu-item-price">8.90 лв</div></div>
+        <div class="menu-item"><div class="menu-item-title">Италианска торта с бял шоколад</div><div class="menu-item-price">8.90 лв</div></div>
+      </div>
+    </section>
+
+  </div><!-- /container -->
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,960 @@
+/* ============================================
+   VA BENE • MODERN DARK NAVY & GOLD THEME
+   Premium Italian Restaurant UI
+   Works with: index.html + menu.html
+============================================ */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* СНИМКА ЗА ФОН НА ЦЕЛИЯ САЙТ */
+  background-image: url("assets/images/menu-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1200px, 92vw);
+  margin-inline: auto;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================
+   HEADER • Floating Dark Glass + Gold
+============================================ */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  background: rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  z-index: 1000;
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 2px;
+  background: radial-gradient(circle at 20% 20%, #facc6b, #b8860b);
+  box-shadow: 0 0 26px rgba(250, 204, 107, 0.35);
+}
+
+.brand-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-name {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f7d38a, #d6a85b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.brand-sub {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 225, 185, 0.65);
+}
+
+
+/* MAIN NAV */
+.main-nav {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+}
+
+.main-nav a {
+  position: relative;
+  padding: 6px 2px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #facc6b, #eab308);
+  transition: width 0.25s ease-out;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+.main-nav a.active {
+  color: #facc6b;
+}
+
+/* BURGER BUTTON */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 24px;
+  height: 2px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+/* ============================================
+   MOBILE OVERLAY MENU
+============================================ */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #020617, #020617 40%, #000 100%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+}
+
+.overlay.open {
+  display: flex;
+}
+
+.overlay-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.overlay-nav {
+  list-style: none;
+  text-align: center;
+}
+
+.overlay-nav li {
+  margin: 12px 0;
+}
+
+.overlay-nav a {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+/* ============================================
+   HERO • Dark Navy + City Photo
+============================================ */
+
+.hero {
+ background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+    url("assets/images/menu-hero.jpg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+
+  padding-top: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BACKGROUND PHOTO — ITALIAN STREET (hero.jpg) */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.45) saturate(115%);
+  z-index: -2;
+}
+
+/* NAVY + GOLD GRADIENT OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(250, 204, 107, 0.18), transparent 60%),
+    linear-gradient(180deg, rgba(3, 7, 18, 0.4), rgba(3, 7, 18, 0.9));
+  z-index: -1;
+}
+
+/* HERO CONTENT CARD */
+.hero-content {
+  padding: 48px 38px;
+  background: rgba(3, 7, 18, 0.68);
+  border-radius: 28px;
+  border: 1px solid rgba(250, 204, 107, 0.28);
+  backdrop-filter: blur(14px);
+  max-width: 780px;
+  margin-inline: auto;
+  text-align: center;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.85);
+  animation: heroFade 1.2s ease forwards;
+}
+
+.hero-logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  padding: 4px;
+  background: radial-gradient(circle at 20% 20%, #facc6b, #b8860b);
+  box-shadow:
+    0 0 26px rgba(250, 204, 107, 0.5),
+    0 18px 40px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 60px);
+  color: #f9fafb;
+}
+
+/* GOLD SHINE TEXT */
+.gold-text {
+  background: linear-gradient(90deg, #facc6b, #fef3c7, #facc6b);
+  -webkit-background-: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 220% auto;
+  animation: goldShine 5s linear infinite;
+}
+
+.hero p {
+  margin-top: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+/* HERO BUTTONS */
+.hero-actions {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 24px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #facc6b, #eab308);
+  color: #111827;
+  box-shadow: 0 14px 32px rgba(234, 179, 8, 0.5);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 45px rgba(234, 179, 8, 0.7);
+}
+
+.btn.ghost {
+  border-color: rgba(249, 250, 251, 0.7);
+  color: #f9fafb;
+  background: rgba(15, 23, 42, 0.2);
+}
+
+.btn.ghost:hover {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+/* ============================================
+   GENERIC SECTION
+============================================ */
+
+.section {
+  padding: 100px 0;
+  background: transparent;   /* без черен фон */
+}
+
+
+/* ABOUT */
+.about .container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.9fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.about-copy p {
+  color: #d1d5db;
+}
+
+.ticks {
+  margin-top: 18px;
+  list-style: none;
+}
+
+.ticks li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  color: #e5e7eb;
+}
+
+.ticks li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #facc6b;
+  font-size: 18px;
+}
+
+/* ABOUT CARD */
+.about-card,
+.contact-card,
+.reserve-form,
+.menu-page,
+.menu-section {
+  background: rgba(0, 0, 0, 0.28) !important;
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+
+/* ============================================
+   RESERVATIONS
+============================================ */
+
+.reservation .lead {
+  max-width: 520px;
+  color: #9ca3af;
+}
+
+.reserve-form {
+  margin-top: 24px;
+  max-width: 780px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #9ca3af;
+}
+
+input,
+textarea {
+  margin-top: 6px;
+  width: 100%;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  padding: 11px 12px;
+  font-size: 14px;
+  color: #f9fafb;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #facc6b;
+  box-shadow: 0 0 0 1px rgba(250, 204, 107, 0.4);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-msg {
+  margin-top: 10px;
+  min-height: 20px;
+  font-size: 14px;
+}
+
+/* ============================================
+   GALLERY • modern grid
+============================================ */
+
+.gallery {
+  background: radial-gradient(circle at top, #020617, #020617 40%, #000 100%);
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.gallery .lead {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: #020617;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.9);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, transparent, rgba(3, 7, 18, 0.75));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* ============================================
+   CONTACT
+============================================ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.contact-card {
+  background: radial-gradient(circle at top left, rgba(15, 23, 42, 1), rgba(15, 23, 42, 0.95));
+  padding: 24px 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.8);
+}
+
+.contact-card h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #facc6b;
+  margin-bottom: 10px;
+}
+
+.map {
+  width: 100%;
+  border: 0;
+  border-radius: 18px;
+  min-height: 320px;
+  box-shadow: 0 22px 60px rgba(0,0,0,0.9);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+
+.site-footer {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo.small {
+  width: 38px;
+  height: 38px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ============================================
+   REVEAL ANIMATION
+============================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   MENU PAGE (menu.html) • Michelin style
+============================================ */
+
+.menu-page {
+  min-height: 100vh;
+  padding-top: 96px;
+  padding-bottom: 80px;
+  background: radial-gradient(circle at top, #020617, #020617 40%, #000 100%);
+}
+
+/* ============================
+   MENU HERO — Amalfi Premium
+============================ */
+
+.menu-hero {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+
+  background-image:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
+      url("assets/images/menu-hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 140px 20px;
+  color: #fff;
+}
+
+
+
+/* Background Image */
+.menu-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/images/menu-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.35) saturate(125%);
+  z-index: -2;
+}
+
+/* Dark cinematic overlay */
+.menu-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.4),
+    rgba(2, 6, 23, 0.9)
+  );
+  z-index: -1;
+}
+
+/* Content */
+.menu-hero-content {
+  max-width: 720px;
+  padding: 50px 22px;
+  border-radius: 24px;
+}
+
+/* Logo */
+.menu-hero-logo {
+  width: 125px;
+  height: 125px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,215,130,0.7);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.menu-hero h1 {
+  font-size: clamp(40px, 6vw, 70px);
+  font-weight: 700;
+  color: #f8f8f8;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.menu-hero .lead {
+  font-size: 18px;
+  color: #d7d7d9;
+  letter-spacing: 0.03em;
+  margin-bottom: 25px;
+}
+
+.menu-divider {
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(90deg, #d3ac64, #f0d7a0, #d3ac64);
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+
+/* Gold divider */
+.menu-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, #facc6b, #eab308);
+  margin: 18px auto 0;
+}
+
+/* Menu sections */
+.menu-section {
+  margin-bottom: 48px;
+}
+
+.menu-section h2 {
+  font-size: 20px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #facc6b;
+  margin-bottom: 20px;
+}
+
+.menu-group {
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) auto;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.8);
+}
+
+.menu-item-title {
+  font-weight: 600;
+}
+
+.menu-item-desc {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.menu-item-price {
+  font-family: "Playfair Display", serif;
+  color: #facc6b;
+  white-space: nowrap;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+@media (max-width: 900px) {
+  .main-nav { display: none; }
+  .burger { display: flex; }
+
+  .about .container,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-content {
+    padding: 36px 24px;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* HERO ANIMATIONS */
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes goldShine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* ============================
+   MENU HERO — Amalfi Premium
+============================ */
+
+.menu-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+.menu-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/images/menu-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.45) saturate(120%);
+  z-index: -2;
+}
+
+.menu-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.4),
+    rgba(2, 6, 23, 0.85)
+  );
+  z-index: -1;
+}
+
+.menu-hero-content {
+  max-width: 680px;
+  padding: 40px 20px;
+}
+
+.menu-hero-logo {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 215, 130, 0.7);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.menu-hero h1 {
+  font-size: clamp(38px, 5vw, 60px);
+  color: #f8f8f8;
+  margin-bottom: 6px;
+}
+
+.menu-hero .lead {
+  font-size: 17px;
+  color: #d4d4d6;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+
+.menu-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, #dcb56c, #f0dbac, #dcb56c);
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.menu-hero {
+  position: relative;
+  width: 100%;
+  padding: 160px 0 120px;
+  background-image:
+      linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.55)),
+      url("assets/images/menu-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+}
+.brand-meta {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 12px;
+  z-index: 10;
+  position: relative;
+}
+
+.brand-name {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f9d77e, #e3b564, #f9d77e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 4px rgba(255, 197, 108, 0.45));
+}
+
+.brand-sub {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #d8c6a3;
+  opacity: 0.9;
+}
+/* Оправяме статичната снимка и черната сянка */
+
+/* Премахваме допълнителните фонове и оувърлеи */
+.hero-bg,
+.hero-tint {
+  display: none !important;
+}
+
+.hero::before {
+  content: none !important;
+}
+
+/* Правим HERO секцията прозрачна – да се вижда само глобалният фон */
+.hero {
+  background: transparent !important;
+}
+
+/* Секцията “Италиански дух…” също без собствен фон */
+.section.about,
+.about {
+  background: transparent !important;
+}
+
+.section.about::before,
+.about::before {
+  content: none !important;
+}
+/* ============================
+   MOBILE FIX – HERO BACKGROUND
+============================= */
+@media (max-width: 768px) {
+
+  .hero {
+    background-size: contain !important; /* вече не зумира */
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    min-height: 80vh;
+  }
+
+  .hero-bg {
+    background-size: contain !important;
+    background-position: center top !important;
+  }
+}
