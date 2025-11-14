@@ -949,3 +949,40 @@ textarea {
 .menu-hero-content img {
     display: block !important;
 }
+/* ===============================
+   FINAL HERO MOBILE FIX
+   Stops zooming on phones
+================================ */
+@media (max-width: 768px) {
+
+  /* HERO главната страница */
+  .hero {
+      background-image: url("menu-hero.jpg") !important;
+      background-size: contain !important;
+      background-position: top center !important;
+      background-repeat: no-repeat !important;
+      background-attachment: scroll !important;
+      min-height: 90vh !important;
+  }
+
+  /* Премахваме допълнителни слоеве */
+  .hero-bg,
+  .hero::before {
+      display: none !important;
+  }
+
+  /* MENU HERO */
+  .menu-hero {
+      background-image: url("menu-hero.jpg") !important;
+      background-size: contain !important;
+      background-position: top center !important;
+      background-repeat: no-repeat !important;
+      background-attachment: scroll !important;
+      min-height: 80vh !important;
+  }
+
+  .menu-hero-bg,
+  .menu-hero-overlay {
+      display: none !important;
+  }
+}
