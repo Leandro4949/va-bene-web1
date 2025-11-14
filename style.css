@@ -19,7 +19,7 @@ body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   /* СНИМКА ЗА ФОН НА ЦЕЛИЯ САЙТ */
-  background-image: url("assets/images/menu-hero.jpg");
+  background-image: url("menu-hero.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -221,7 +221,7 @@ h1, h2, h3 {
 .hero {
  background-image:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
-    url("assets/images/menu-hero.jpg");
+    url("menu-hero.jpg");
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
@@ -620,7 +620,7 @@ textarea {
 
   background-image:
       linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
-      url("assets/images/menu-hero.jpg");
+      url("menu-hero.jpg");
 
   background-size: cover;
   background-position: center;
@@ -642,7 +642,7 @@ textarea {
 .menu-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("assets/images/menu-hero.jpg");
+  background-image: url("menu-hero.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -821,7 +821,7 @@ textarea {
 .menu-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("assets/images/menu-hero.jpg");
+  background-image: url("menu-hero.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -880,7 +880,7 @@ textarea {
   padding: 160px 0 120px;
   background-image:
       linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.55)),
-      url("assets/images/menu-hero.jpg");
+      url("menu-hero.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
