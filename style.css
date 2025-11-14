@@ -219,12 +219,12 @@ h1, h2, h3 {
 ============================================ */
 
 .hero {
- background-image:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
-    url("menu-hero.jpg");
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+  background-image: url("menu-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* вместо fixed */
+
+
 
   padding-top: 96px;
   display: flex;
@@ -956,5 +956,13 @@ textarea {
   .hero-bg {
     background-size: contain !important;
     background-position: center top !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    background-position: top center;
+    background-size: cover;
+    background-attachment: scroll !important;
+    min-height: 80vh;
   }
 }
