@@ -914,75 +914,20 @@ textarea {
   content: none !important;
 }
 
-@media (max-width: 768px) {
-
-  .hero-bg {
-    background-size: contain !important; /* вече не зумира */
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
-    min-height: 80vh;
-  }
-
-  .hero-bg {
-    background-size: contain !important;
-    background-position: center top !important;
-  }
-}
-@media (max-width: 768px) {
-  .hero-bg{
-    background-position: top center;
-    background-size: cover;
-    background-attachment: scroll !important;
-    min-height: 80vh;
-  }
-}
-.menu-hero-logo {
-    position: relative !important;
-    z-index: 10 !important;
-    display: block !important;
+.hero,
+.hero::before,
+.hero-bg {
+  background: transparent !important;
+  content: none !important;
+  display: none !important; /* скрива малката снимка */
 }
 
-.menu-hero img {
-    display: block !important;
+/* На меню страницата също спираме фоновете, за да се вижда само глобалната */
+.menu-hero {
+  background: transparent !important;
 }
 
-.menu-hero-content img {
-    display: block !important;
-}
-/* ===============================
-   FINAL HERO MOBILE FIX
-   Stops zooming on phones
-================================ */
-@media (max-width: 768px) {
-
-  /* HERO главната страница */
-  .hero {
-      background-image: url("menu-hero.jpg") !important;
-      background-size: contain !important;
-      background-position: top center !important;
-      background-repeat: no-repeat !important;
-      background-attachment: scroll !important;
-      min-height: 90vh !important;
-  }
-
-  /* Премахваме допълнителни слоеве */
-  .hero-bg,
-  .hero::before {
-      display: none !important;
-  }
-
-  /* MENU HERO */
-  .menu-hero {
-      background-image: url("menu-hero.jpg") !important;
-      background-size: contain !important;
-      background-position: top center !important;
-      background-repeat: no-repeat !important;
-      background-attachment: scroll !important;
-      min-height: 80vh !important;
-  }
-
-  .menu-hero-bg,
-  .menu-hero-overlay {
-      display: none !important;
-  }
+.menu-hero-bg,
+.menu-hero-overlay {
+  display: none !important;
 }
