@@ -1,10 +1,5 @@
-/* ============================================
-   VA BENE • MODERN DARK NAVY & GOLD THEME
-   Premium Italian Restaurant UI
-   Works with: index.html + menu.html
-============================================ */
 
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +13,6 @@ html {
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  /* СНИМКА ЗА ФОН НА ЦЕЛИЯ САЙТ */
   background-image: url("menu-hero.jpg");
   background-size: cover;
   background-position: center;
@@ -236,7 +230,7 @@ h1, h2, h3 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("assets/images/hero.jpg");
+  background-image: url("hero.jpg");
   background-size: cover;
   background-position: center;
   filter: brightness(0.45) saturate(115%);
@@ -462,9 +456,7 @@ textarea {
   font-size: 14px;
 }
 
-/* ============================================
-   GALLERY • modern grid
-============================================ */
+
 
 .gallery {
   background: radial-gradient(circle at top, #020617, #020617 40%, #000 100%);
@@ -520,9 +512,7 @@ textarea {
   opacity: 1;
 }
 
-/* ============================================
-   CONTACT
-============================================ */
+
 
 .contact-grid {
   display: grid;
@@ -555,9 +545,7 @@ textarea {
   box-shadow: 0 22px 60px rgba(0,0,0,0.9);
 }
 
-/* ============================================
-   FOOTER
-============================================ */
+
 
 .site-footer {
   background: rgba(0, 0, 0, 0.35);
@@ -583,9 +571,7 @@ textarea {
   color: #9ca3af;
 }
 
-/* ============================================
-   REVEAL ANIMATION
-============================================ */
+
 
 .reveal {
   opacity: 0;
@@ -598,9 +584,7 @@ textarea {
   transform: translateY(0);
 }
 
-/* ============================================
-   MENU PAGE (menu.html) • Michelin style
-============================================ */
+
 
 .menu-page {
   min-height: 100vh;
@@ -609,9 +593,6 @@ textarea {
   background: radial-gradient(circle at top, #020617, #020617 40%, #000 100%);
 }
 
-/* ============================
-   MENU HERO — Amalfi Premium
-============================ */
 
 .menu-hero {
   position: relative;
@@ -638,7 +619,6 @@ textarea {
 
 
 
-/* Background Image */
 .menu-hero-bg {
   position: absolute;
   inset: 0;
@@ -650,7 +630,6 @@ textarea {
   z-index: -2;
 }
 
-/* Dark cinematic overlay */
 .menu-hero-overlay {
   position: absolute;
   inset: 0;
@@ -662,14 +641,13 @@ textarea {
   z-index: -1;
 }
 
-/* Content */
 .menu-hero-content {
   max-width: 720px;
   padding: 50px 22px;
   border-radius: 24px;
 }
 
-/* Logo */
+
 .menu-hero-logo {
   width: 125px;
   height: 125px;
@@ -705,7 +683,7 @@ textarea {
 }
 
 
-/* Gold divider */
+
 .menu-divider {
   width: 80px;
   height: 2px;
@@ -713,7 +691,6 @@ textarea {
   margin: 18px auto 0;
 }
 
-/* Menu sections */
 .menu-section {
   margin-bottom: 48px;
 }
@@ -754,9 +731,7 @@ textarea {
   white-space: nowrap;
 }
 
-/* ============================================
-   RESPONSIVE
-============================================ */
+
 
 @media (max-width: 900px) {
   .main-nav { display: none; }
@@ -791,7 +766,7 @@ textarea {
   }
 }
 
-/* HERO ANIMATIONS */
+
 @keyframes heroFade {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -802,9 +777,7 @@ textarea {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-/* ============================
-   MENU HERO — Amalfi Premium
-============================ */
+
 
 .menu-hero {
   position: relative;
@@ -819,15 +792,16 @@ textarea {
 }
 
 .menu-hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("menu-hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  filter: brightness(0.45) saturate(120%);
-  z-index: -2;
+    position: absolute;
+    inset: 0;
+    background-image: url("menu-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll !important; /* само това */
+    filter: brightness(0.45) saturate(120%);
+    z-index: -2;
 }
+
 
 .menu-hero-overlay {
   position: absolute;
@@ -914,9 +888,7 @@ textarea {
   color: #d8c6a3;
   opacity: 0.9;
 }
-/* Оправяме статичната снимка и черната сянка */
 
-/* Премахваме допълнителните фонове и оувърлеи */
 .hero-bg,
 .hero-tint {
   display: none !important;
@@ -926,12 +898,12 @@ textarea {
   content: none !important;
 }
 
-/* Правим HERO секцията прозрачна – да се вижда само глобалният фон */
+
 .hero {
   background: transparent !important;
 }
 
-/* Секцията “Италиански дух…” също без собствен фон */
+
 .section.about,
 .about {
   background: transparent !important;
@@ -941,12 +913,10 @@ textarea {
 .about::before {
   content: none !important;
 }
-/* ============================
-   MOBILE FIX – HERO BACKGROUND
-============================= */
+
 @media (max-width: 768px) {
 
-  .hero {
+  .hero-bg {
     background-size: contain !important; /* вече не зумира */
     background-position: center top !important;
     background-repeat: no-repeat !important;
@@ -959,10 +929,23 @@ textarea {
   }
 }
 @media (max-width: 768px) {
-  .hero {
+  .hero-bg{
     background-position: top center;
     background-size: cover;
     background-attachment: scroll !important;
     min-height: 80vh;
   }
+}
+.menu-hero-logo {
+    position: relative !important;
+    z-index: 10 !important;
+    display: block !important;
+}
+
+.menu-hero img {
+    display: block !important;
+}
+
+.menu-hero-content img {
+    display: block !important;
 }
